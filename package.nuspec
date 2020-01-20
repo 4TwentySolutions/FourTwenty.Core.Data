@@ -21,8 +21,8 @@
     <summary></summary>
   </metadata>
   <files>
-	<file src="FourTwenty.Core.Data\bin\Release\FourTwenty.Core.Data.dll" target="lib\netstandard2.1" /> 
-	<file src="FourTwenty.Core.Data\bin\Release\FourTwenty.Core.Data.pdb" target="lib\netstandard2.1" />
+	<file src="FourTwenty.Core.Data\bin\Release\netstandard2.1\FourTwenty.Core.Data.dll" target="lib\netstandard2.1" /> 
+	<file src="FourTwenty.Core.Data\bin\Release\netstandard2.1\FourTwenty.Core.Data.pdb" target="lib\netstandard2.1" />
 	<file src="logo_small.png" target="" />    	
   </files>
 </package>
