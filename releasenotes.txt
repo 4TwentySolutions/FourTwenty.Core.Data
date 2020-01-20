@@ -1,2 +1,1 @@
-Initial commit
-Multiline notes test
+Refactoring
