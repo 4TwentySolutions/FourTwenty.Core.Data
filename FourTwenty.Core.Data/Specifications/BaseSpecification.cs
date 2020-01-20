@@ -122,7 +122,7 @@ namespace FourTwenty.Core.Data.Specifications
         }
     }
 
-    internal sealed class IdentitySpecification<T> : BaseSpecification<T>
+    public sealed class IdentitySpecification<T> : BaseSpecification<T>
     {
         public override Expression<Func<T, bool>> ToExpression()
         {
@@ -130,7 +130,7 @@ namespace FourTwenty.Core.Data.Specifications
         }
     }
 
-    internal sealed class AndSpecification<T> : BaseSpecification<T>
+    public sealed class AndSpecification<T> : BaseSpecification<T>
     {
         private readonly ISpecification<T> _left;
         private readonly ISpecification<T> _right;
@@ -153,7 +153,7 @@ namespace FourTwenty.Core.Data.Specifications
         }
     }
 
-    internal sealed class OrSpecification<T> : BaseSpecification<T>
+    public sealed class OrSpecification<T> : BaseSpecification<T>
     {
         private readonly ISpecification<T> _left;
         private readonly ISpecification<T> _right;
@@ -176,7 +176,7 @@ namespace FourTwenty.Core.Data.Specifications
         }
     }
 
-    internal sealed class NotSpecification<T> : BaseSpecification<T>
+    public sealed class NotSpecification<T> : BaseSpecification<T>
     {
         private readonly ISpecification<T> _specification;
 
