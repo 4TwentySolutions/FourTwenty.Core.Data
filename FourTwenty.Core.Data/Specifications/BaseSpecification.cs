@@ -28,7 +28,7 @@ namespace FourTwenty.Core.Data.Specifications
 
         public bool IsSatisfiedBy(T entity)
         {
-            Func<T, bool> predicate = ToExpression().Compile();
+            var predicate = ToExpression().Compile();
             return predicate(entity);
         }
 
@@ -36,10 +36,7 @@ namespace FourTwenty.Core.Data.Specifications
         {
             if (this == All)
                 return specification;
-            if (specification == All)
-                return this;
-
-            return new AndSpecification<T>(this, specification);
+            return specification == All ? this : new AndSpecification<T>(this, specification);
         }
 
         public ISpecification<T> Or(ISpecification<T> specification)
@@ -51,7 +48,7 @@ namespace FourTwenty.Core.Data.Specifications
 
         public int PageNumber { get; private set; }
         public int PageSize { get; private set; }
-        public bool IsPagingEnabled { get; private set; } = false;
+        public bool IsPagingEnabled { get; private set; }
 
         protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
         {

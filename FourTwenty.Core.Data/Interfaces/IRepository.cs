@@ -18,7 +18,9 @@ namespace FourTwenty.Core.Data.Interfaces
         void AddRange(IEnumerable<T> entity);
         void Update(T entity);
         void Delete(T entity);
-        int Count(ISpecification<T> spec = null);
+        
+        int Count();
+        int Count(ISpecification<T> spec);
         void DeleteRange(IEnumerable<T> entity);
     }
 }

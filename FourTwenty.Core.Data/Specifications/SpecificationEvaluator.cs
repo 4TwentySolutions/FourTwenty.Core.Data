@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FourTwenty.Core.Data.Specifications
 {
-    public class SpecificationEvaluator<T> where T : class
+    public static class SpecificationEvaluator<T> where T : class
     {
         public static IQueryable<T> GetQuery(IQueryable<T> inputQuery, ISpecification<T> specification)
         {

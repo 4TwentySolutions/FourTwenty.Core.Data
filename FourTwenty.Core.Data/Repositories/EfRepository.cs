@@ -44,7 +44,7 @@ namespace FourTwenty.Core.Data.Repositories
             var item = GetById(key);
             if (item != null)
             {
-                await DeleteAsync(item);
+                await DeleteAsync(item).ConfigureAwait(false);
             }
         }
     }
@@ -90,12 +90,15 @@ namespace FourTwenty.Core.Data.Repositories
             return await ApplySpecification(spec).AsNoTracking().ToListAsync();
         }
 
-        public virtual int Count(ISpecification<T> spec = null)
+        public virtual int Count() => Count(null);
+
+        public virtual int Count(ISpecification<T> spec)
         {
             return spec != null ? ApplySpecification(spec).Count() : Set.Count();
         }
 
-        public virtual async Task<int> CountAsync(ISpecification<T> spec = null)
+        public virtual Task<int> CountAsync() => CountAsync(null);
+        public virtual async Task<int> CountAsync(ISpecification<T> spec)
         {
             if (spec != null)
                 return await ApplySpecification(spec).CountAsync();
@@ -106,7 +109,6 @@ namespace FourTwenty.Core.Data.Repositories
         {
             Set.Add(entity);
             DbContext.SaveChanges();
-
             return entity;
         }
 
@@ -114,14 +116,13 @@ namespace FourTwenty.Core.Data.Repositories
         {
             Set.Add(entity);
             await DbContext.SaveChangesAsync();
-
             return entity;
         }
 
         public virtual void AddRange(IEnumerable<T> entity)
         {
             Set.AddRange(entity);
-            DbContext.SaveChanges(); ;
+            DbContext.SaveChanges();
         }
 
         public virtual async Task AddRangeAsync(IEnumerable<T> entity)
