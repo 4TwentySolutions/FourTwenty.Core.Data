@@ -3,7 +3,7 @@ Base classes for cross-platform database management
 
 ### Build 
 [![Build status](https://dev.azure.com/420-solutions/FourTwenty.Core.Data/_apis/build/status/FourTwenty.Core.Data-CI)](https://dev.azure.com/420-solutions/FourTwenty.Core.Data/_build/latest?definitionId=9)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/464e0a87c236417f981c590b9587c31f)](https://www.codacy.com/gh/4TwentySolutions/FourTwenty.Core.Data?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=4TwentySolutions/FourTwenty.Core.Data&amp;utm_campaign=Badge_Grade)
 
 ### Features
 
