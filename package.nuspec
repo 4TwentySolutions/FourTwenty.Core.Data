@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>FourTwenty.Core.Data</id>
+    <version>1.0.0</version>
+    <title>FourTwenty.Core.Data</title>
+    <authors>Anton Yaroshenko, Pavel Kurianov, 4Twenty Solutions</authors>
+    <owners>4Twenty Solutions</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/4TwentySolutions/FourTwenty.Core.Data</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Base classes for cross-platform database management</description>
+    <releaseNotes>$notes$</releaseNotes>
+    <copyright>Copyright 2019 4Twenty Solutions</copyright>
+    <tags>EntityFrameworkCore EFCore Xamarin Sqlite</tags>
+	<icon>logo_small.png</icon>
+	<iconUrl>https://github.com/4TwentySolutions/FourTwenty.Core.Data/raw/master/logo_small.png</iconUrl>
+    <dependencies>
+    
+    </dependencies>
+    <summary></summary>
+  </metadata>
+  <files>
+	<file src="FourTwenty.Core.Data\bin\Release\FourTwenty.Core.Data.dll" target="lib\netstandard2.1" /> 
+	<file src="FourTwenty.Core.Data\bin\Release\FourTwenty.Core.Data.pdb" target="lib\netstandard2.1" />
+	<file src="logo_small.png" target="" />    	
+  </files>
+</package>
