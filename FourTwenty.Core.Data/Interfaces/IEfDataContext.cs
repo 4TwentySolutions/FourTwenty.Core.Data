@@ -14,5 +14,7 @@ namespace FourTwenty.Core.Data.Interfaces
         EntityEntry Entry(object entity);
         EntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
         #endregion
+
+
     }
 }
