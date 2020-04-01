@@ -6,14 +6,14 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace FourTwenty.Core.Data.Repositories
 {
-    public abstract class EfDbContext : DbContext, IEfDataContext
+    public class EfDbContext : DbContext, IEfDataContext
     {
-        protected EfDbContext(DbContextOptions options) : base(options)
+        public EfDbContext(DbContextOptions options) : base(options)
         {
 
         }
 
-        protected EfDbContext()
+        public EfDbContext()
         {
 
         }
