@@ -8,11 +8,12 @@ namespace FourTwenty.Core.Data.Repositories
 {
     public abstract class EfDbContext : DbContext, IEfDataContext
     {
-        public EfDbContext(DbContextOptions options) : base(options)
+        protected EfDbContext(DbContextOptions options) : base(options)
         {
 
         }
-        public EfDbContext()
+
+        protected EfDbContext()
         {
 
         }
