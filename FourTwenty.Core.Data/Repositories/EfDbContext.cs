@@ -6,8 +6,17 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace FourTwenty.Core.Data.Repositories
 {
-    public class EfDbContext : DbContext, IEfDataContext
+    public abstract class EfDbContext : DbContext, IEfDataContext
     {
+        public EfDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
+        public EfDbContext()
+        {
+
+        }
+
         #region transactions
         protected IDbContextTransaction Transaction;
         public virtual void BeginTransaction()
@@ -68,7 +77,7 @@ namespace FourTwenty.Core.Data.Repositories
             await Transaction.RollbackAsync(token);
             await Transaction.DisposeAsync();
             Transaction = null;
-        } 
+        }
         #endregion
     }
 }
